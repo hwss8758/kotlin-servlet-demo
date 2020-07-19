@@ -7,21 +7,23 @@ import javax.servlet.http.HttpServletResponse
 class HelloServlet : HttpServlet() {
 
     override fun init() {
-        println("init")
+        println("HelloServlet init")
     }
 
     override fun doGet(req: HttpServletRequest?, resp: HttpServletResponse?) {
-        println("doGet")
+        println("HelloServlet doGet")
         resp?.writer?.println("<html>")
         resp?.writer?.println("<head>")
         resp?.writer?.println("<body>")
-        resp?.writer?.println("<h1>Hello Servlet</h1>")
+        resp?.writer?.println("<h1>Hello, " + getName() + "</h1>")
         resp?.writer?.println("</body>")
         resp?.writer?.println("</head>")
         resp?.writer?.println("</html>")
     }
 
+    private fun getName() = servletContext.getAttribute("name")
+
     override fun destroy() {
-        println("destroy")
+        println("HelloServlet destroy")
     }
 }

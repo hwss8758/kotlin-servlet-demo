@@ -4,7 +4,21 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  
+
+  <filter>
+    <filter-name>myFilter</filter-name>
+    <filter-class>me.wonsang.MyFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>myFilter</filter-name>
+    <servlet-name>hello</servlet-name>
+  </filter-mapping>
+
+  <listener>
+    <listener-class>me.wonsang.MyListener</listener-class>
+  </listener>
+
   <servlet>
     <servlet-name>hello</servlet-name>
     <servlet-class>me.wonsang.HelloServlet</servlet-class>
@@ -12,6 +26,6 @@
   
   <servlet-mapping>
     <servlet-name>hello</servlet-name>
-    <url-pattern>/hello1</url-pattern>
+    <url-pattern>/hello</url-pattern>
   </servlet-mapping>
 </web-app>
