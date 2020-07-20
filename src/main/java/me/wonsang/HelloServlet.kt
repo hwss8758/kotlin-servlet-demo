@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletResponse
 class HelloServlet : HttpServlet() {
 
     override fun init() {
-        println("HelloServlet init")
+        println("HelloServlet:HttpServlet init")
     }
 
     override fun doGet(req: HttpServletRequest?, resp: HttpServletResponse?) {
 
-        println("HelloServlet doGet")
+        println("HelloServlet:HttpServlet doGet")
 
         val context: ApplicationContext =
                 servletContext.getAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE) as ApplicationContext
@@ -33,6 +33,6 @@ class HelloServlet : HttpServlet() {
     private fun getName() = servletContext.getAttribute("name")
 
     override fun destroy() {
-        println("HelloServlet destroy")
+        println("HelloServlet:HttpServlet destroy")
     }
 }
