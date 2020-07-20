@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<h2>Hello Spring MVC!</h2>
+<h2>Hello Sample MVC!</h2>
 </body>
 </html>

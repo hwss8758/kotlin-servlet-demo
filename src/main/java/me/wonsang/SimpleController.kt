@@ -8,6 +8,6 @@ import javax.servlet.http.HttpServletResponse
 @org.springframework.stereotype.Controller("/simple")
 class SimpleController : Controller {
     override fun handleRequest(p0: HttpServletRequest, p1: HttpServletResponse): ModelAndView? {
-        return ModelAndView("/WEB-INF/simple.jsp")
+        return ModelAndView("simple")
     }
 }

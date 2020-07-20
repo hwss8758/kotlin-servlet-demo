@@ -16,5 +16,5 @@ class HelloController {
     fun hello(): String = "Hello, " + helloService.getName()
 
     @GetMapping("/sample")
-    fun sample(): String = "/WEB-INF/sample.jsp"
+    fun sample(): String = "sample"
 }
